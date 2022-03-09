@@ -1,0 +1,60 @@
+#header{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(18, 101, 179);
+}
+    #store-name{
+        width: 85%;
+    }
+    .head-item{
+        border: none;
+    }
+    .head-item i{
+        margin-top: 0;
+        font-size:20px;
+    }
+#center{
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
+}
+    #left-space{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5%;
+    }
+    #right-space{
+        position: absolute;
+        top: 0;
+        left: 95%;
+        width: 5%;
+    }
+    #main{
+        position: absolute;
+        top: 0;
+        left: 5%;
+        width: 90%;
+        height: auto;
+    }
+    #category-bar{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        /* background-color: aqua; */
+    }
+    .icon{
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+    .li-space{
+        margin-right: 10px;
+    }
+    ul li:hover,
+    ul li:hover a {
+        color: blue; 
+        font-weight: bold;
+        cursor: pointer;
+    }
