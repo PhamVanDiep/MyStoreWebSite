@@ -1,11 +1,20 @@
 #header{
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     width: 100%;
     height: 50px;
     background-color: rgb(18, 101, 179);
+    z-index: 3;
 }
-    #store-name{
-        width: 85%;
+    #home-btn {
+        position: absolute;
+        width: auto;
+        left: 5%;
+    }
+    #main-btn {
+        position: absolute;
+        width: auto;
+        left: 85%;
     }
     .head-item{
         border: none;
@@ -14,6 +23,34 @@
         margin-top: 0;
         font-size:20px;
     }
+    #search_wrap{
+        position: absolute;
+        left: 30%;
+        width: 40%;
+        height: 100%;
+    }
+    #search_core{
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        height: 70%;
+        width: 80%;
+    }
+        #search_core span{
+            position: absolute;
+            display: block;
+            width: 2.375rem;
+            height: 2.375rem;
+            line-height: 2.0rem;
+            text-align: center;
+            pointer-events: none;
+            color: #aaa;
+            max-height: 35px;
+        }
+        #search_core input{
+            padding-left: 2.375rem;
+            max-height: 35px;
+        }
 #center{
     position: absolute;
     width: 100%;
@@ -39,10 +76,11 @@
         height: auto;
     }
     #category-bar{
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 50px;
-        /* background-color: aqua; */
+        z-index: 2;
+        background-color: white;
     }
     .icon{
         width: 25px;
@@ -58,3 +96,9 @@
         font-weight: bold;
         cursor: pointer;
     }
+#content-wrap{
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    z-index: 1;
+}
