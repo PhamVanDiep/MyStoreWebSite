@@ -6,23 +6,36 @@
     background-color: rgb(18, 101, 179);
     z-index: 3;
 }
+    #header h5{
+        position: absolute;
+        top: 10px;
+        color: white;
+        left: 5%;
+    }
     #home-btn {
         position: absolute;
         width: auto;
-        left: 5%;
+        left: 25%;
     }
     #main-btn {
         position: absolute;
         width: auto;
         left: 85%;
     }
-    .head-item{
+    #main-btn i, #home-btn i{
+        top: 6px;
+        font-size: 20px;
+    }
+    #main-btn a, #home-btn a{
+        text-decoration: none;
+    }
+    /* .head-item{
         border: none;
     }
     .head-item i{
         margin-top: 0;
         font-size:20px;
-    }
+    } */
     #search_wrap{
         position: absolute;
         left: 30%;
@@ -89,6 +102,7 @@
     }
     .li-space{
         margin-right: 10px;
+        margin-top: 10px;
     }
     ul li:hover,
     ul li:hover a {
@@ -98,7 +112,78 @@
     }
 #content-wrap{
     position: absolute;
-    width: 100%;
+    width: 1180px;
     top: 50px;
+    left: calc((100% - 1180px)/2);
     z-index: 1;
+}
+.product-wrap{
+    background: white;
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-self: center;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0px 5px 10px #404040;
+}
+
+.product-wrap :hover{
+    cursor: pointer;
+}
+
+.product-image-wrap{
+    height: 250px;
+    transition: all .2s ease-in-out;
+}
+
+.product-image-wrap img{
+    width: 250px;
+    height: 250px;
+    display: block;
+}
+
+.product-image-wrap :hover{
+    transform: scale(1.5);
+    cursor: pointer; 
+}
+
+.product-info-wrap{
+    position: absolute;
+    top: 260px;
+    width: 250px;
+    height: 60px;
+    z-index: 4;
+    background-color: white;
+}
+
+.product-info{
+    position: absolute;
+    font-size: 18px;
+    left: 10px;
+    display: block;
+    max-width: 230px;
+}
+
+.product-price{
+    top: 30px;
+}
+
+.hl{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+#store-info{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+}
+#store-info i{
+    margin-left: 10px;
+    font-size: 16px;
 }

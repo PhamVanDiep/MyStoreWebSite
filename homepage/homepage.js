@@ -11,3 +11,9 @@ function chooseCategory(params) {
         }
     }
 }
+
+// let transition = document.getElementsByClassName('product-img');
+// for (let index = 0; index < transition.length; index++) {
+//     const element = transition[index];
+//     element.
+// }
