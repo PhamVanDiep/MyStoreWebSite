@@ -33,8 +33,20 @@
                 <button type="button" id="account" class="btn btn-group head-item">
                     <i class="bi bi-person-fill text-light"></i></button> -->
                 <a href="#store-info"><i class="bi bi-info-circle text-light btn btn-group"></i></a>
-                <i class="bi bi-cart4 text-light btn btn-group"></i>
-                <i class="bi bi-person-fill text-light btn btn-group"></i>
+                <a href="../cart/cart.html">
+                    <i class="bi bi-cart4 text-light btn btn-group"></i>
+                    <span class='badge badge-warning' id='lblCartCount'> 5 </span>
+                </a>
+                <!-- <div class="popup" onclick="myFunction()">Click me!
+                    <span class="popuptext" id="myPopup">Popup text...</span>
+                </div>  -->
+                <a href="../account/register.html"><div class="btn btn-group">Đăng ký</div></a>
+                <div class="divide btn-group">|</div>
+                <a href="../account/login.html"><div class="btn btn-group">Đăng nhập</div></a>
+                <!-- <p class="btn btn-group">Đăng ký</p>
+                <p class="btn btn-group">|</p>
+                <p class="btn btn-group">Đăng nhập</p> -->
+                <!-- <i class="bi bi-person-fill text-light btn btn-group"></i> -->
             </div>
         </div>
         <div id="center">
@@ -44,12 +56,13 @@
                 <nav>
                     <div id="category-bar">
                         <ul>
-                            <li class="btn-group li-space" onclick="chooseCategory(0)"><img src="/icon/water-dispenser.png" class="icon">Máy lọc nước</li>
-                            <li class="btn-group li-space" onclick="chooseCategory(1)"><img src="/icon/home-appliance.png" class="icon">Thiết bị gia dụng</li>
-                            <li class="btn-group li-space" onclick="chooseCategory(2)"><img src="/icon/lightbulb.png" class="icon">Thiết bị điện</li>
-                            <li class="btn-group li-space" onclick="chooseCategory(3)"><img src="/icon/tap.png" class="icon">Thiết bị nước</li>
-                            <li class="btn-group li-space" onclick="chooseCategory(4)"><img src="/icon/gardening-tools.png" class="icon">Thiết bị nông nghiệp</li>
-                            <li class="btn-group li-space" onclick="chooseCategory(5)"><img src="/icon/customer-support.png" class="icon">Thiết bị lao động</li>
+                            <li class="btn-group li-space" onclick="chooseCategory(0)"><img src="/icon/cubes.png" class="icon">Tất cả sản phẩm</li>
+                            <li class="btn-group li-space" onclick="chooseCategory(1)"><img src="/icon/water-dispenser.png" class="icon">Máy lọc nước</li>
+                            <li class="btn-group li-space" onclick="chooseCategory(2)"><img src="/icon/home-appliance.png" class="icon">Thiết bị gia dụng</li>
+                            <li class="btn-group li-space" onclick="chooseCategory(3)"><img src="/icon/lightbulb.png" class="icon">Thiết bị điện</li>
+                            <li class="btn-group li-space" onclick="chooseCategory(4)"><img src="/icon/tap.png" class="icon">Thiết bị nước</li>
+                            <li class="btn-group li-space" onclick="chooseCategory(5)"><img src="/icon/gardening-tools.png" class="icon">Thiết bị nông nghiệp</li>
+                            <li class="btn-group li-space" onclick="chooseCategory(6)"><img src="/icon/customer-support.png" class="icon">Thiết bị lao động</li>
                         </ul>
                     </div>
                 </nav>
@@ -65,7 +78,15 @@
                         <div class="product-image-wrap"><img src="/image/PBCB-15.jpg"></div>
                         <div class="product-info-wrap">
                             <h2 class="product-name product-info">Bóng đèn loại 1</h2>
-                            <h2 class="product-price product-info">50.000đ</h2>
+                            <h2 class="product-price product-info">Gia: 50.000 (đ/chiec)</h2>
+                            <div class="product-quantity">
+                                <div class="btn-group">So luong:</div>
+                                <input type="number" value="1" class="btn-group" min="1">
+                            </div>
+                        </div>
+                        <div class="add-product-btn-wrap">
+                            <button class="add-to-cart-btn">Them vao gio hang</button>
+                            <button class="buy-btn">Mua ngay</button>
                         </div>
                     </div>
                     <div class="btn-group product-wrap">

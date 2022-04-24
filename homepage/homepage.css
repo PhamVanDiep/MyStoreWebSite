@@ -4,7 +4,7 @@
     width: 100%;
     height: 50px;
     background-color: rgb(18, 101, 179);
-    z-index: 3;
+    z-index: 4;
 }
     #header h5{
         position: absolute;
@@ -20,12 +20,44 @@
     #main-btn {
         position: absolute;
         width: auto;
-        left: 85%;
+        left: 70%;
     }
     #main-btn i, #home-btn i{
         top: 6px;
         font-size: 20px;
     }
+    #main-btn div{
+        top: 6px;
+        color: #fff;
+        text-decoration: underline;
+        margin: 0 0 0 0;
+        border: none;
+    }
+    
+    .badge {
+        padding-left: 9px;
+        padding-right: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        border-radius: 9px;
+    }
+    .label-warning[href],
+    .badge-warning[href] {
+        background-color: #c67605;
+    }
+    #lblCartCount {
+        font-size: 12px;
+        background: #ff0000;
+        color: #fff;
+        /* padding: 0 5px;
+        vertical-align: top;
+        margin-left: -10px; 
+        margin-top: 6px; */
+        padding: 3px 3px 3px 3px;
+        margin-left: -15px;
+        margin-top: 0;
+    }
+
     #main-btn a, #home-btn a{
         text-decoration: none;
     }
@@ -63,6 +95,7 @@
         #search_core input{
             padding-left: 2.375rem;
             max-height: 35px;
+            outline: none;
         }
 #center{
     position: absolute;
@@ -121,7 +154,7 @@
     background: white;
     position: relative;
     width: 250px;
-    height: 350px;
+    height: 450px;
     border-radius: 10px;
     overflow: hidden;
     justify-self: center;
@@ -154,7 +187,7 @@
     position: absolute;
     top: 260px;
     width: 250px;
-    height: 60px;
+    height: 100px;
     z-index: 4;
     background-color: white;
 }
@@ -167,8 +200,63 @@
     max-width: 230px;
 }
 
+.product-name{
+    font-size: 20px;
+    font-weight: bold;
+}
 .product-price{
     top: 30px;
+}
+
+.product-quantity{
+    position: absolute;
+    left: 10px;
+    top:60px;
+    height: 35px;
+    width: 230px;
+    text-align: left;
+}
+
+.product-quantity div{
+    width: fit-content;
+    text-align: left;
+}
+
+.product-quantity input{
+    position: absolute;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.product-info h2{
+    font-size: 18px;
+    margin-left: 0px;
+}
+
+.add-product-btn-wrap{
+    position: absolute;
+    top: 360px;
+    width: 230px;
+    left: 10px;
+}
+
+.add-product-btn-wrap button{
+    margin-top: 5px;
+    width: 230px;
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}
+
+.add-to-cart-btn{
+    background-color: rgb(25, 175, 100);
+}
+
+.buy-btn{
+    background-color: #ff0000;
 }
 
 .hl{

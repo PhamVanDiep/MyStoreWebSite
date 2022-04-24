@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Dang ky</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100vh;
+            }
+
+            body img{
+                width: 100%;
+                height: 100%;
+            }
+
+            #register-wrap{
+                position: absolute;
+                width: 30%;
+                height: 80%;
+                top: 10%;
+                left: 35%;
+                background-color: aliceblue;
+                overflow-y: auto;
+            }
+
+            #register-title-wrap{
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                text-align: center;
+                display: table;
+            }
+
+            #register-title{
+                font-size: 25px;
+                display: table-cell;
+                vertical-align: middle;
+                font-weight: 600;
+            }
+
+            #register-info{
+                position: absolute;
+                top: 20%;
+                width: 100%;
+            }
+            .register-info-wrap{
+                width: 80%;
+                margin-left: 10%;
+                height: fit-content;
+                margin-bottom: 5%;
+            }
+
+            .register-info-title{
+                width: 100%;
+                text-align: left;
+            }
+
+            .register-info-input{
+                width: 100%;
+            }
+
+            .register-info-input input{
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid black;
+                background-color: aliceblue;
+                width: 100%;
+                outline: none;
+            }
+
+            #register-btn-wrap{
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 5%;
+                margin-top: 5%;
+            }
+
+            .register-password-input{
+                width: 100%;
+                height: 30px;
+                border-bottom: 1px solid black;
+            }
+
+            .register-password-input input{
+                border: none;
+                background-color: aliceblue;
+                outline: none;
+            }
+
+            .input-password-wrap{
+                position: absolute;
+                width: 90%;
+            }
+
+            .input-password-wrap input{
+                width: 100%;
+            }
+            .hide-show-password-wrap{
+                position: absolute;
+                width: 10%;
+                left: 90%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            #register-btn-wrap button{
+                border: none;
+                width: 40%;
+                font-size: larger;
+                border-radius: 20px;
+                background-color: dodgerblue;
+                outline: none;
+                font-weight: bolder;
+                color: white;
+                padding-top: 2%;
+                padding-bottom: 2%;
+            }
+
+            #link-to-login-wrap{
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                margin-bottom: 5%;
+            }
+
+            #account-confirm-wrap{
+                width: 100%;
+                margin-bottom: 5%;
+                display: none;
+            }
+
+            #account-confirm-title{
+                width: 80%;
+                margin-left: 10%;
+            }
+
+            #account-confirm{
+                width: 80%;
+                margin-left: 10%;
+            }
+
+            #account-confirm input{
+                outline: none;
+            }
+
+            #account-confirm button{
+                outline: none;
+                border: 1px solid rgb(248, 39, 39);
+                height: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(248, 39, 39);
+                color: white;
+                border-radius: 5px;
+            }
+
+            #account-confirm-title span{
+                color: rgb(245, 87, 87);
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../image/login-background.jpg" alt="" srcset="">
+        <div id="register-wrap">
+            <div id="register-title-wrap" class="btn-group-vertical">
+                <span id="register-title">REGISTER</span>
+            </div>
+            <div id="register-info">
+                <div class="register-info-wrap btn-group-vertical">
+                    <div class="register-info-title btn-group-vertical">
+                        <span>Email</span>
+                    </div>
+                    <div class="register-info-input btn-group-vertical">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="register-info-wrap btn-group-vertical">
+                    <div class="register-info-title btn-group-vertical">
+                        <span>Full name</span>
+                    </div>
+                    <div class="register-info-input btn-group-vertical">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="register-info-wrap btn-group-vertical">
+                    <div class="register-info-title btn-group-vertical">
+                        <span>Phone number</span>
+                    </div>
+                    <div class="register-info-input btn-group-vertical">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="register-info-wrap btn-group-vertical">
+                    <div class="register-info-title btn-group-vertical">
+                        <span>Address</span>
+                    </div>
+                    <div class="register-info-input btn-group-vertical">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="register-info-wrap btn-group-vertical">
+                    <div class="register-info-title btn-group-vertical">
+                        <span>Password</span>
+                    </div>
+                    <div class="register-password-input">
+                        <div class="input-password-wrap">
+                            <input type="password">
+                        </div>
+                        <div class="hide-show-password-wrap">
+                            <i class="bi bi-eye-fill" id="showPassword"  style="display: none;"></i>
+                            <i class="bi bi-eye-slash-fill" id="hidePassword"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="register-info-wrap btn-group-vertical">
+                    <div class="register-info-title btn-group-vertical">
+                        <span>Confirm password</span>
+                    </div>
+                    <div class="register-password-input">
+                        <div class="input-password-wrap">
+                            <input type="password">
+                        </div>
+                        <div class="hide-show-password-wrap">
+                            <i class="bi bi-eye-fill" id="showConfirmPassword" style="display: none;"></i>
+                            <i class="bi bi-eye-slash-fill" id="hideConfirmPassword"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="register-btn-wrap" class="btn-group-vertical">
+                    <button id="register-btn">Register</button>
+                </div>
+                <div id="account-confirm-wrap" class="btn-group-vertical">
+                    <div id="account-confirm-title">
+                        <span>We have been sent to you an email. Check it and fill the capcha code into text field below.</span>
+                    </div>
+                    <div id="account-confirm">
+                        <input type="text" name="" id="" class="btn-group">
+                        <button id="confirm-btn"  class="btn-group">Confirm</button>
+                    </div>
+                </div>
+                <div id="link-to-login-wrap" class="btn-group-vertical">
+                    <span>You have an account?
+                        <a href="./login.html"><span>Click here!</span></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        let register_btn = document.getElementById('register-btn');
+        register_btn.onclick = function (){
+            let confirm_wrap = document.getElementById('account-confirm-wrap');
+            confirm_wrap.style.display = "block";
+        }
+
+        let confirm_btn = document.getElementById('confirm-btn');
+        confirm_btn.onclick = function (){
+            window.location.href = './login.html';
+        }
+
+        const hideConfirmPassword = document.getElementById('hideConfirmPassword')
+        const showConfirmPassword = document.getElementById('showConfirmPassword')
+        const showPassword = document.getElementById('showPassword')
+        const hidePassword = document.getElementById('hidePassword')
+        const hide_show_passwords = document.getElementsByClassName('hide-show-password-wrap')
+
+        let isHidePassword = true
+        let isHideConfirmPassword = true
+
+        hide_show_passwords[0].addEventListener('click', changeHideAndShow)
+        hide_show_passwords[1].addEventListener('click', changeConfirmHideAndShow)
+
+        const inputs = document.getElementsByTagName('input')
+
+        function changeHideAndShow() {
+            if(isHidePassword){
+                isHidePassword = false
+                hidePassword.style.display = "none"
+                showPassword.style.display = "block"
+                inputs[4].setAttribute('type','text')
+            }else{
+                isHidePassword = true
+                hidePassword.style.display = "block"
+                showPassword.style.display = "none"
+                inputs[4].setAttribute('type','password')
+            }
+        }
+
+        function changeConfirmHideAndShow() {
+            if(isHideConfirmPassword){
+                isHideConfirmPassword = false
+                hideConfirmPassword.style.display = "none"
+                showConfirmPassword.style.display = "block"
+                inputs[5].setAttribute('type','text')
+            }else{
+                isHideConfirmPassword = true
+                hideConfirmPassword.style.display = "block"
+                showConfirmPassword.style.display = "none"
+                inputs[5].setAttribute('type','password')
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Quen mat khau</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100vh;
+            }
+
+            body img{
+                width: 100%;
+                height: 100%;
+            }
+
+            #login-wrap{
+                position: absolute;
+                width: 30%;
+                height: 80%;
+                top: 10%;
+                left: 35%;
+                background-color: aliceblue;
+            }
+
+            #login-title-wrap{
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                text-align: center;
+                display: table;
+            }
+
+            #login-title{
+                font-size: 25px;
+                display: table-cell;
+                vertical-align: middle;
+                font-weight: 600;
+            }
+
+            #register-info{
+                position: absolute;
+                top: 20%;
+                width: 100%;
+            }
+            .register-info-wrap{
+                width: 80%;
+                margin-left: 10%;
+                height: fit-content;
+                margin-bottom: 5%;
+            }
+
+            .register-info-title{
+                width: 100%;
+                text-align: left;
+            }
+
+            .register-info-input{
+                width: 100%;
+                height: 30px;
+                border-bottom: 1px solid black;
+            }
+
+            .register-info-input input{
+                border: none;
+                background-color: aliceblue;
+                outline: none;
+            }
+
+            #new-password-wrap{
+                display: none;
+            }
+
+            .input-password-wrap{
+                position: absolute;
+                width: 90%;
+            }
+
+            .input-password-wrap input{
+                width: 100%;
+            }
+            .hide-show-password-wrap{
+                position: absolute;
+                width: 10%;
+                left: 90%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            #button-wrap{
+                justify-content: center;
+                align-items: center;
+            }
+            .register-info-wrap button{
+                border: none;
+                width: 40%;
+                height: 80%;
+                font-size: larger;
+                border-radius: 20px;
+                background-color: dodgerblue;
+                outline: none;
+                font-weight: bolder;
+                color: white;
+                padding-top: 2%;
+                padding-bottom: 2%;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../image/login-background.jpg" alt="" srcset="">
+        <div id="login-wrap">
+            <div id="login-title-wrap">
+                <span id="login-title">FORGOT PASSWORD</span>
+            </div>
+            <div id="register-info">
+                <div class="register-info-wrap btn-group-vertical">
+                    <div class="register-info-title btn-group-vertical">
+                        <span>Capcha code</span>
+                    </div>
+                    <div class="register-info-input btn-group-vertical">
+                        <input type="text" id="capcha-code-input" onkeyup="checkCapchaCode()">
+                    </div>
+                </div>
+                <div class="register-info-wrap btn-group-vertical">
+                    <div class="register-info-title btn-group-vertical">
+                        <span id="notification-span"></span>
+                    </div>
+                </div>
+                <div id="new-password-wrap">
+                    <div class="register-info-wrap btn-group-vertical">
+                        <div class="register-info-title btn-group-vertical">
+                            <span>Password</span>
+                        </div>
+                        <div class="register-info-input">
+                            <div class="input-password-wrap">
+                                <input type="password">
+                            </div>
+                            <div class="hide-show-password-wrap">
+                                <i class="bi bi-eye-fill" id="showPassword"  style="display: none;"></i>
+                                <i class="bi bi-eye-slash-fill" id="hidePassword"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register-info-wrap btn-group-vertical">
+                        <div class="register-info-title btn-group-vertical">
+                            <span>Confirm password</span>
+                        </div>
+                        <div class="register-info-input">
+                            <div class="input-password-wrap">
+                                <input type="password">
+                            </div>
+                            <div class="hide-show-password-wrap">
+                                <i class="bi bi-eye-fill" id="showConfirmPassword" style="display: none;"></i>
+                                <i class="bi bi-eye-slash-fill" id="hideConfirmPassword"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register-info-wrap btn-group-vertical" id="button-wrap">
+                        <button>Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const capcha_code = 'HelloDiep'
+        const capcha_code_input = document.getElementById('capcha-code-input');
+        const notification = document.getElementById('notification-span');
+        const new_password = document.getElementById('new-password-wrap');
+
+        function checkCapchaCode(){
+            const getString = capcha_code_input.value;
+            check(getString);
+        }
+
+        capcha_code_input.onkeypress = function(e){
+            const getString = capcha_code_input.value;
+            let keynum;
+            if(window.event) {                
+                keynum = e.keyCode;
+            } else if(e.which){                
+                keynum = e.which;
+            }
+            if (keynum == 13) {
+                check(getString);
+            }
+        }
+
+        function check(getString){
+            if(getString === capcha_code){
+                notification.innerHTML = "<i>Correct capcha code</i>"
+                notification.style.color = "green"
+                capcha_code_input.setAttribute("readonly","true");
+                new_password.style.display = "block";
+            }else{
+                notification.innerHTML = "<i>Error capcha code</i>"
+                notification.style.color = "red"
+            }
+        }
+
+        const hideConfirmPassword = document.getElementById('hideConfirmPassword')
+        const showConfirmPassword = document.getElementById('showConfirmPassword')
+        const showPassword = document.getElementById('showPassword')
+        const hidePassword = document.getElementById('hidePassword')
+        const hide_show_passwords = document.getElementsByClassName('hide-show-password-wrap')
+
+        let isHidePassword = true
+        let isHideConfirmPassword = true
+
+        hide_show_passwords[0].addEventListener('click', changeHideAndShow)
+        hide_show_passwords[1].addEventListener('click', changeConfirmHideAndShow)
+
+        const inputs = document.getElementsByTagName('input')
+
+        function changeHideAndShow() {
+            if(isHidePassword){
+                isHidePassword = false
+                hidePassword.style.display = "none"
+                showPassword.style.display = "block"
+                inputs[1].setAttribute('type','text')
+            }else{
+                isHidePassword = true
+                hidePassword.style.display = "block"
+                showPassword.style.display = "none"
+                inputs[1].setAttribute('type','password')
+            }
+        }
+
+        function changeConfirmHideAndShow() {
+            if(isHideConfirmPassword){
+                isHideConfirmPassword = false
+                hideConfirmPassword.style.display = "none"
+                showConfirmPassword.style.display = "block"
+                inputs[2].setAttribute('type','text')
+            }else{
+                isHideConfirmPassword = true
+                hideConfirmPassword.style.display = "block"
+                showConfirmPassword.style.display = "none"
+                inputs[2].setAttribute('type','password')
+            }
+        }
+
+        document.getElementsByTagName('button')[0].addEventListener('click', function () {
+            window.location.href = './login.html'
+        })
+    </script>
+</html>

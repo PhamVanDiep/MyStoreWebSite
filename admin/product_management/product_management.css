@@ -1,21 +1,69 @@
 #left-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgb(29, 14, 73);
+}
 
+#left-bar p{
+    color: #fff;
+    font-size: 18px;
+    margin-left: 5px;
+}
+.manage-icon{
+    margin-top: -3px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.main-function{
+    margin-left: 0;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    background-color: rgb(29, 14, 73);
+    padding-left: 10px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+}
+
+#left-bar button:hover{
+    background-color: rgb(90, 118, 241);
+}
+
+#main-wrap{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
 }
 
 #product-management-wrap{
-    position: absolute;
-    top: 10px;
-    height: 30px;
-    width: 50%;
-    left: 50%;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: calc(100% - 200px);
+    left: 200px;
+    background-color: #fff;
+    z-index: 4;
 }
+
+.function-wrap{
+    position: absolute;
+    height: 30px;
+    top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
 #select-category{
-    position: absolute;
-    left: 50%;
-    top: 10px;
     width: 15%;
-    height: 30px;
 }
+
 #select-category select{
     width: 100%;
     height: 100%;
@@ -24,11 +72,7 @@
 }
 
 #search-by-name{
-    position: absolute;
-    left: 66%;
     width: 20%;
-    height: 50px;
-    top: 10px;
 }
 
 #search-by-name span{
@@ -48,12 +92,29 @@
     border: rgb(72, 106, 219) solid 1px;
 }
 
+.function-wrap button{
+    background-color: rgb(26, 160, 82);
+    color: #fff;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.function-wrap button i{
+    margin-top: -3px;
+    margin-right: 3px;
+}
 #table_panel{
     position: absolute;
-    width: 100%;
     top: 50px;
+    left: 20px;
+    width: calc(100% - 40px);
     background: #fff;
     overflow-y: auto;
+    z-index: 3;
 }
     #table_panel table {
         position: relative;
@@ -64,10 +125,7 @@
         table-layout: fixed;
         overflow: auto;
         font-size: 15px;
-        font-family: Monsterrat;
         font-weight: lighter;
-        margin-bottom: 100px;
-        border-radius: 5px;
         border: none;
     }
         #table_panel table tr {
@@ -87,19 +145,20 @@
             border-right: none;
             border-left: none;
             border-bottom: none;
+            font-weight: 400;
         }
         #table_panel th:nth-child(1), #table_panel td:nth-child(1) {
             width: 6%;
             text-align: center;
         }
         #table_panel th:nth-child(2), #table_panel td:nth-child(2){
-            width: 10%;
+            width: 22%;
         }
         #table_panel th:nth-child(3), #table_panel td:nth-child(3) {
             width: 15%;
         }
         #table_panel th:nth-child(4), #table_panel td:nth-child(4) {
-            width: 35%;
+            width: 20%;
         }
         #table_panel th:nth-child(5), #table_panel td:nth-child(5) {
             width: 13%;
@@ -111,5 +170,21 @@
             width: 6%;
         }
         #table_panel th:nth-child(8), #table_panel td:nth-child(8) {
+            text-align: center;
             width: 6%;
-        } 
+        }
+        #table_panel td:nth-child(8){
+            font-size: 20px;
+        }
+        #table_panel td:nth-child(9){
+            font-size: 20px;
+        }
+        #table_panel td:nth-child(8) :hover{
+            cursor: pointer;
+        }
+        #table_panel th:nth-child(9), #table_panel td:nth-child(9) {
+            text-align: center;
+        }
+        #table_panel td:nth-child(9) :hover{
+            cursor: pointer;
+        }
